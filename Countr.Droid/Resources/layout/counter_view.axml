@@ -19,6 +19,11 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            local:MvxBind="Text Name" />
+            local:MvxBind="Text Account" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+			android:layout_marginTop="50dp"
+            local:MvxBind="Text Password" />
     </FrameLayout>
 </RelativeLayout>

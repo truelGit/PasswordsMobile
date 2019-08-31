@@ -18,9 +18,9 @@ namespace Countr.Core.Services
             this.repository = repository;
         }
 
-        public async Task<Counter> AddNewCounter(string name)
+        public async Task<Counter> AddNewCounter(string account, string password)
         {
-            var counter = new Counter { Name = name };
+            var counter = new Counter { Account = account, Password = password };
             await repository.Save(counter).ConfigureAwait(false);
             messenger.Publish(new CountersChangedMessage(this));
             return counter;

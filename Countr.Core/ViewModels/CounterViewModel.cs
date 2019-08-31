@@ -53,7 +53,29 @@ namespace Countr.Core.ViewModels
             }
         }
 
-        public int Count => counter.Count;
+		public string Account
+		{
+			get { return counter.Account; }
+			set
+			{
+				if (Account == value) return;
+				counter.Account = value;
+				RaisePropertyChanged();
+			}
+		}
+
+		public string Password
+		{
+			get { return counter.Password; }
+			set
+			{
+				if (Password == value) return;
+				counter.Password = value;
+				RaisePropertyChanged();
+			}
+		}
+
+		public int Count => counter.Count;
 
         public IMvxAsyncCommand CancelCommand { get; }
         public IMvxAsyncCommand SaveCommand { get; }
@@ -65,7 +87,7 @@ namespace Countr.Core.ViewModels
 
         async Task Save()
         {
-            await service.AddNewCounter(counter.Name);                      
+            await service.AddNewCounter(counter.Account, counter.Password);                      
             await navigationService.Close(this);                            
         }
     }
