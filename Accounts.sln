@@ -2,11 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countr.Core", "Countr.Core\Countr.Core.csproj", "{D95B8AAC-DE0C-49C5-88F5-0583D18AA779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accounts.Core", "Countr.Core\Accounts.Core.csproj", "{D95B8AAC-DE0C-49C5-88F5-0583D18AA779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countr.Droid", "Countr.Droid\Countr.Droid.csproj", "{21401325-08EA-4F93-8FCD-C8BB676643C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Droid", "Countr.Droid\Accounts.Droid.csproj", "{21401325-08EA-4F93-8FCD-C8BB676643C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countr.iOS", "Countr.iOS\Countr.iOS.csproj", "{D74D7352-F8CC-4BFF-829C-5BBDF06C70D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.iOS", "Countr.iOS\Accounts.iOS.csproj", "{D74D7352-F8CC-4BFF-829C-5BBDF06C70D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countr.Core.Tests", "Countr.Core.Tests\Countr.Core.Tests.csproj", "{29562A2D-9A9F-4D68-9A97-54CF9DD5BE44}"
 EndProject

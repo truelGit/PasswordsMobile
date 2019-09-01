@@ -83,14 +83,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Countr.Core\Countr.Core.csproj">
+    <ProjectReference Include="..\Countr.Core\Accounts.Core.csproj">
       <Project>{d95b8aac-de0c-49c5-88f5-0583d18aa779}</Project>
-      <Name>Countr.Core</Name>
+      <Name>Accounts.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

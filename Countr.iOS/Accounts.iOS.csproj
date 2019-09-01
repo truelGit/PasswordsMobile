@@ -237,16 +237,14 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Countr.Core\Countr.Core.csproj">
+    <ProjectReference Include="..\Countr.Core\Accounts.Core.csproj">
       <Project>{D95B8AAC-DE0C-49C5-88F5-0583D18AA779}</Project>
-      <Name>Countr.Core</Name>
+      <Name>Accounts.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bootstrap\" />
-    <Folder Include="Views\" />
-    <Folder Include="Assets.xcassets\Plus.imageset\" />
     <Folder Include="Assets.xcassets\AppLaunchImage.imageset\" />
+    <Folder Include="Assets.xcassets\Plus.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -95,9 +95,9 @@
     <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Countr.Core\Countr.Core.csproj">
+    <ProjectReference Include="..\Countr.Core\Accounts.Core.csproj">
       <Project>{D95B8AAC-DE0C-49C5-88F5-0583D18AA779}</Project>
-      <Name>Countr.Core</Name>
+      <Name>Accounts.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
