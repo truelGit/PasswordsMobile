@@ -109,7 +109,7 @@ namespace Countr.Core.Tests.ViewModels
             // Act
             await viewModel.SaveCommand.ExecuteAsync();
             // Assert
-            countersService.Verify(c => c.AddNewCounter("A Counter"));
+            countersService.Verify(c => c.AddNewCounter("Account", "Password"));
             navigationService.Verify(n => n.Close(viewModel));
         }
 
@@ -122,7 +122,7 @@ namespace Countr.Core.Tests.ViewModels
             // Act
             viewModel.CancelCommand.Execute();
             // Assert
-            countersService.Verify(c => c.AddNewCounter(It.IsAny<string>()), Times.Never());
+            countersService.Verify(c => c.AddNewCounter(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
             navigationService.Verify(n => n.Close(viewModel));
         }
     }
