@@ -16,25 +16,16 @@ namespace Countr.Core.ViewModels
         {
             this.service = service;
             this.navigationService = navigationService;
-            IncrementCommand = new MvxAsyncCommand(IncrementCounter);
-            DeleteCommand = new MvxAsyncCommand(DeleteCounter);
+            DeleteCommand = new MvxAsyncCommand(DeleteAccount);
             CancelCommand = new MvxAsyncCommand(Cancel);
             SaveCommand = new MvxAsyncCommand(Save);
         }
 
-        public IMvxAsyncCommand IncrementCommand { get; }
-
-        async Task IncrementCounter()
-        {
-            await service.IncrementCounter(counter);
-            RaisePropertyChanged(() => Count);
-        }
-
         public IMvxAsyncCommand DeleteCommand { get; }
 
-        async Task DeleteCounter()
+        async Task DeleteAccount()
         {
-            await service.DeleteCounter(counter);
+            await service.DeleteAccount(counter);
         }
 
         public override void Prepare(Counter counter)

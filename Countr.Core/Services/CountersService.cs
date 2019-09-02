@@ -31,16 +31,10 @@ namespace Countr.Core.Services
             return repository.GetAll();
         }
 
-        public async Task DeleteCounter(Counter counter)
+        public async Task DeleteAccount(Counter counter)
         {
             await repository.Delete(counter).ConfigureAwait(false);
             messenger.Publish(new CountersChangedMessage(this));
-        }
-
-        public Task IncrementCounter(Counter counter)
-        {
-            counter.Count += 1;
-            return repository.Save(counter);
         }
     }
 }

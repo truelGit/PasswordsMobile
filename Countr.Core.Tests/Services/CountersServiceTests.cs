@@ -25,18 +25,18 @@ namespace Countr.Core.Tests.Services
         }
 
         [Test]
-        public async Task IncrementCounter_IncrementsTheCounter()
+        public async Task DeleteAccount_IncrementsTheCounter()
         {
             var counter = new Counter { Count = 0 };
-            await service.IncrementCounter(counter);
+            await service.DeleteAccount(counter);
             Assert.AreEqual(1, counter.Count);
         }
 
         [Test]
-        public async Task IncrementCounter_SavesTheIncrementedCounter()
+        public async Task DeleteAccount_SavesTheIncrementedCounter()
         {
             var counter = new Counter { Count = 0 };
-            await service.IncrementCounter(counter);
+            await service.DeleteAccount(counter);
             repo.Verify(r => r.Save(It.Is<Counter>(c => c.Count == 1)),
             Times.Once());
         }
@@ -54,10 +54,10 @@ namespace Countr.Core.Tests.Services
         }
 
         [Test]
-        public async Task DeleteCounter_PublishesAMessage()
+        public async Task DeleteAccount_PublishesAMessage()
         {
             // Act
-            await service.DeleteCounter(new Counter());
+            await service.DeleteAccount(new Counter());
             // Assert
             messenger.Verify(m => m.Publish(It.IsAny<CountersChangedMessage>()));
         }

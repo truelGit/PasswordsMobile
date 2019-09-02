@@ -65,23 +65,23 @@ namespace Countr.Core.Tests.ViewModels
         }
 
         [Test]
-        public async Task IncrementCounter_IncrementsTheCounter()
+        public async Task DeleteAccount_IncrementsTheCounter()
         {
             // Act
-            await viewModel.IncrementCommand.ExecuteAsync();
+            await viewModel.DeleteCommand.ExecuteAsync();
             // Assert
-            countersService.Verify(s => s.IncrementCounter(It.IsAny<Counter>()));
+            countersService.Verify(s => s.DeleteAccount(It.IsAny<Counter>()));
         }
 
         [Test]
-        public async Task IncrementCounter_RaisesPropertyChanged()
+        public async Task DeleteAccount_RaisesPropertyChanged()
         {
             // Arrange
             var propertyChangedRaised = false;
             viewModel.PropertyChanged +=
                (s, e) => propertyChangedRaised = (e.PropertyName == "Count");
             // Act
-            await viewModel.IncrementCommand.ExecuteAsync();
+            await viewModel.DeleteCommand.ExecuteAsync();
             // Assert
             Assert.IsTrue(propertyChangedRaised);
         }
@@ -97,7 +97,7 @@ namespace Countr.Core.Tests.ViewModels
             await viewModel.DeleteCommand.ExecuteAsync();
 
             // Assert
-            countersService.Verify(c => c.DeleteCounter(counter));
+            countersService.Verify(c => c.DeleteAccount(counter));
         }
 
         [Test]
