@@ -7,7 +7,7 @@ using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace Countr.Droid.Views
 {
-    [Activity(Label = "Add a new counter")]
+    [Activity(Label = "Add a new account")]
     public class CounterView : MvxAppCompatActivity<CounterViewModel>
     {
         protected override void OnCreate(Bundle bundle)
