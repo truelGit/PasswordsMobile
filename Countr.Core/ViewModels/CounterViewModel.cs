@@ -12,21 +12,28 @@ namespace Countr.Core.ViewModels
         readonly ICountersService service;
         readonly IMvxNavigationService navigationService;
 
-        public CounterViewModel(ICountersService service, IMvxNavigationService navigationService)
+		public CounterViewModel(ICountersService service, IMvxNavigationService navigationService)
         {
             this.service = service;
             this.navigationService = navigationService;
             DeleteCommand = new MvxAsyncCommand(DeleteAccount);
+			ShowCommand = new MvxAsyncCommand(Show);
             CancelCommand = new MvxAsyncCommand(Cancel);
             SaveCommand = new MvxAsyncCommand(Save);
         }
 
         public IMvxAsyncCommand DeleteCommand { get; }
+        public IMvxAsyncCommand ShowCommand { get; }
 
         async Task DeleteAccount()
         {
             await service.DeleteAccount(counter);
         }
+
+        async Task Show()
+        {
+	        await navigationService.Navigate(typeof(CounterViewModel), this.counter);
+		}
 
         public override void Prepare(Counter counter)
         {

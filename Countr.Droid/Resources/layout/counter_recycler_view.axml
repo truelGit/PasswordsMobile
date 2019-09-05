@@ -3,6 +3,7 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+	local:MvxBind="Click ShowCommand"
     android:layout_height="50dp">
     <ImageButton
         android:id="@+id/add_image"
