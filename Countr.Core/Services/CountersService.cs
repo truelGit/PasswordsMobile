@@ -31,7 +31,13 @@ namespace Countr.Core.Services
             return repository.GetAll();
         }
 
-        public async Task DeleteAccount(Counter counter)
+        public async Task UpdateAccount(Counter counter)
+		{
+			await repository.Save(counter).ConfigureAwait(false);
+			messenger.Publish(new CountersChangedMessage(this));
+		}
+
+		public async Task DeleteAccount(Counter counter)
         {
             await repository.Delete(counter).ConfigureAwait(false);
             messenger.Publish(new CountersChangedMessage(this));

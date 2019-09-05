@@ -85,7 +85,10 @@ namespace Countr.Core.ViewModels
 
         async Task Save()
         {
-            await service.AddNewCounter(counter.Account, counter.Password);                      
+	        if (counter.Id == null)
+		        await service.AddNewCounter(counter.Account, counter.Password);
+	        else
+		        await service.UpdateAccount(counter);
             await navigationService.Close(this);                            
         }
     }

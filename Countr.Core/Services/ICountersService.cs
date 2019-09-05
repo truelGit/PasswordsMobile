@@ -7,7 +7,8 @@ namespace Countr.Core.Services
     public interface ICountersService
     {
         Task<Counter> AddNewCounter(string account, string password);
-        Task<List<Counter>> GetAllCounters();
+        Task UpdateAccount(Counter counter);
+		Task<List<Counter>> GetAllCounters();
         Task DeleteAccount(Counter counter);
     }
 }
