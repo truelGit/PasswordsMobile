@@ -5,8 +5,8 @@ using MvvmCross.Droid.Views;
 namespace Countr.Droid
 {
     [Activity(
-        Label = "Countr"
-        , MainLauncher = true
+        Label = "@string/ApplicationName"
+		, MainLauncher = true
         , Icon = "@mipmap/ic_launcher"
         , Theme = "@style/Theme.Splash"
         , NoHistory = true
